@@ -138,8 +138,11 @@ add_action( 'widgets_init', 'coolmat_widgets_init' );
  * Enqueue scripts and styles.
  */
 function coolmat_scripts() {
+	
 	wp_enqueue_style( 'coolmat-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'coolmat-style', 'rtl', 'replace' );
+
+	wp_enqueue_style( 'coolmat-custom-style', get_stylesheet_directory_uri() . "./css/custom.css" );
 
 	wp_enqueue_script( 'coolmat-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -175,4 +178,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
