@@ -37,8 +37,8 @@ get_header();
 
         <!-- our intro element -->
 
-        <div class="intro">
-            <div class="intro-inner">
+        <div class="intro" id="intro">
+            <div class=" intro-inner">
                 <h2 class="intro-title">
                     Introducing <?php bloginfo('name'); ?>
                 </h2>
@@ -62,6 +62,9 @@ get_header();
         <div class="food-grid">
             <?php
 		if ( have_posts() ) :
+
+            $item_number = 1;
+
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -71,6 +74,7 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', get_post_type() );
+              $item_number++;
 			endwhile;
 			the_posts_navigation();
 		else :

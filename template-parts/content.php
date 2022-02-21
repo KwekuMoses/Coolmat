@@ -6,7 +6,7 @@
  *
  * @package cool-mat
  */
-
+global $item_number
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -17,6 +17,11 @@
 
         </h1>
 
+        <!-- grab our food menu item number  -->
+
+        <div class="entry-number">
+            <?php echo $item_number?>
+        </div>
 
         <!-- price (content) to the right  -->
         <div class="entry-price">
