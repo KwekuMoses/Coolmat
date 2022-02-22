@@ -55,11 +55,11 @@ get_header();
             </div>
         </div>
 
-        <div class="food-title" id="food">
+        <div class="section-heading" id="food">
             Menu
         </div>
 
-        <div class="food-grid">
+        <div class="grid">
             <?php
 		if ( have_posts() ) :
 
@@ -81,6 +81,47 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 		endif;
 		?>
+        </div>
+
+        <div class="section-heading" id="locations">
+            Directions to cool mat
+        </div>
+
+        <div class="locations grid">
+            <!-- each individual location -->
+            <div class="location">
+                <div class="map">
+                    <div class="map-inner">
+                        <!-- map embed goes here -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9531939287563!2d126.86218631561098!3d37.55616653247896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9c03c38738ad%3A0x1eff909f2c04315c!2s284-10%20Yeomchang-dong%2C%20Gangseo-gu%2C%20Seoul%2C%20South%20Korea!5e0!3m2!1sen!2sse!4v1645517195322!5m2!1sen!2sse"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- location info goes here -->
+            <div class="location-info">
+                <div class="location-description">
+                    <h3>
+                        Business Name (12pt)
+                    </h3>
+                    <p>
+                        cool mat
+                    </p>
+                    <h3> Address</h3>
+                    <p> 284-10 Yeomchang-dong, Gangseo-gu, Seoul</p>
+                    <h3> Phone Number</h3>
+                    <p>
+                        02-9999-9999
+                    </p>
+                    <h3> Direction</h3>
+                    <p>Get out of gate 3 and walk straight down for about
+                        200 meters. You will see Cool Mat on your left.
+                    </p>
+
+                </div>
+            </div>
         </div>
 
     </main><!-- #main -->

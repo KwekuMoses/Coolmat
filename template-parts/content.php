@@ -13,16 +13,15 @@ global $item_number
     <header class="entry-header">
         <!-- title to the left -->
         <h1 class="entry-title">
-            <?php  the_title(); ?>
-
+            <?php the_title(); ?>
         </h1>
 
         <!-- grab our food menu item number  -->
-
         <div class="entry-number">
-            <?php echo $item_number?>
+            <span>
+                <?php echo $item_number;?>
+            </span>
         </div>
-
         <!-- price (content) to the right  -->
         <div class="entry-price">
             <?php the_content(); ?>

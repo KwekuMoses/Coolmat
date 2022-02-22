@@ -11,24 +11,28 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'coolmat' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'coolmat' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'coolmat' ), 'coolmat', '<a href="https://github.com/KwekuMoses">Kweku Moses</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+    <div class="site-info">
+
+        <div class="footer-copyright">
+            © <?php echo date("Y"); ?> cool mat. All Rights Reserved
+        </div>
+
+        <div class="footer-social">
+            <a href="#">
+                <img src="<?php bloginfo('template_url') ?>/assets/facebook-icon.svg." class="social-link">
+            </a>
+            <a href="#">
+                <img src="<?php bloginfo('template_url') ?>/assets/instagram-icon.svg." class="social-link">
+            </a>
+        </div>
+
+    </div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
